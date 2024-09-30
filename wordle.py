@@ -204,7 +204,7 @@ def get_feedback(secret_word, guessed_word):
         if feedback[i] != CORRECT_COLOR and guessed_word[i] in secret_words:
             feedback[i] = WRONG_SPOT_COLOR
             # Takes out the first occurrence of the letter from secret_words
-            secret_words[secret_words.index(guessed_word[i] in secret_words)] = None
+            secret_words[secret_words.index(guessed_word[i])] = None
 
     # You do not have to change this return statement
     return color_word(feedback, guessed_word)
